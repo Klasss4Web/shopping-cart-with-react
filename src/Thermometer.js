@@ -55,6 +55,7 @@ class Thermometer extends React.Component{
         
     }
 
+     
     celcius(event){
         this.setState({
             input: event.target.value
