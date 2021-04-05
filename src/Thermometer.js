@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom'
 
 class Thermometer extends React.Component{
     constructor(props){
-        super();
+        super(props);
         this.state = {input: '', input1: '', input2: ''};
+        
         this.celcius = this.celcius.bind(this)
         this.kelvin = this.kelvin.bind(this)
         this.farenheit = this.farenheit.bind(this)
@@ -30,12 +31,12 @@ class Thermometer extends React.Component{
     conversion1(){
         {/* Kelvin to Celcius */}
         this.setState(newValue1 => ({
-            input: this.state.input1 !== '' ? parseInt(newValue1.input1) - 273 : ''
+            input: this.state.input1 !== '' ? (parseInt(newValue1.input1) - 273).toFixed(2) : ''
             
         }));
         {/* Kelvin Farenheit */}
         this.setState(newValue1 => ({
-            input2: this.state.input1 !== '' ? (parseInt(newValue1.input1)*1.8 - 459.7) : ''
+            input2: this.state.input1 !== '' ? ((parseInt(newValue1.input1)*1.8 - 459.7)).toFixed(2) : ''
             
         })); 
         
@@ -44,12 +45,12 @@ class Thermometer extends React.Component{
     conversion2(){
         {/* Farenheit to Celcius*/}
         this.setState(newValue2 => ({
-            input: this.state.input2 !== '' ? (parseInt(newValue2.input2) - 32)/1.8 : ''
+            input: this.state.input2 !== '' ? ((parseInt(newValue2.input2) - 32)/1.8).toFixed(2) : ''
             
         }));
         {/* Farenheit to Kelvin */}
         this.setState(newValue2 => ({
-            input1: this.state.input2 !== '' ? (parseInt(newValue2.input2) + 459.67)*0.556 : ''
+            input1: this.state.input2 !== '' ? ((parseInt(newValue2.input2) + 459.67)*0.556).toFixed(2) : ''
             
         })); 
         
@@ -91,9 +92,7 @@ class Thermometer extends React.Component{
              
             </div>  
                  
-                );
-            
-            
+                );           
     }
 
 }
