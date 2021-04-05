@@ -79,7 +79,7 @@ class Thermometer extends React.Component{
         
         return(
             
-            <div>
+            <div className = "container">
                 <h1>THERMOMETER CONVERTER</h1>
                 <p>Our offline thermometer converter converts temperature values between three different temperature scales: the Celcius Scale, the Farenheit Scale and the Kelvin Scale.</p>
                 <input value = {this.state.input} placeholder = 'Celcius' onChange = {this.celcius} />
@@ -87,9 +87,7 @@ class Thermometer extends React.Component{
                 <input value = {this.state.input1} onChange = {this.kelvin} placeholder = 'Kelvin' />
                 <button onClick = {this.conversion1}>Kelvin</button>
                 <input value = {this.state.input2} placeholder = 'Farenheit' onChange = {this.farenheit}/>
-                <button onClick = {this.conversion2}>Farenheit</button>                
-             
-             
+                <button onClick = {this.conversion2}>Farenheit</button>                            
             </div>  
                  
                 );           
