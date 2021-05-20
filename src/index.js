@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import Thermometer from './Thermometer';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <Thermometer />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

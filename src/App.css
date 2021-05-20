@@ -28,6 +28,33 @@
   color: #61dafb;
 }
 
+.products {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.products img {
+  width: 100%;
+}
+
+.product {
+  padding: 40px;
+}
+
+button {
+  padding: 15px 75px;
+}
+
+header {
+  background-color: blue;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+header button {
+  background-color: grey;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
